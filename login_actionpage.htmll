@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>
+            login action-page
+        </title>
+        <style>
+            .modal{
+                border-style: ridge;
+                display: none;
+                position:fixed;
+                z-index:1;
+                left: 520px;
+                right:500px;
+                top: 100px;
+                width: 300px;;
+                height:400px;
+                overflow:auto;
+                background-color: red;
+                background-color: rgba(18, 180, 221, 0.979);
+                padding-top: 60px;
+            }
+           .modal-content{
+            background-color: whitesmoke;
+            margin:5px auto;
+            border:1px solid ;
+            border-style: outset;
+            width:100%;
+            }
+           .close{
+            border-style: groove;
+            background-color: rgb(243, 10, 10);
+            position:absolute;
+            right:2px;
+            top: 0;
+            height: 25px;
+            color:black;
+            font-size: 25px;
+            font-weight:bold;
+            }
+           .close:hover,
+           .close:focus{
+            color: whitesmoke;
+            cursor:pointer;
+            background-color: black;
+            }
+           .but:hover{
+            color:whitesmoke;
+            cursor:pointer;
+            background-color:green;
+            }
+           .animate{
+            -webkit-animation: animatezoom 30s;
+            animation: animatezoom 30s;
+            }
+             @-webkit-keyframes animatezoom{
+            
+         -webkit-animation-direction: normal;
+            }
+            .container{
+                padding:16px;
+            }
+            .imagecontainer{
+                position: relative;
+            }        
+            .avatar{
+                position: center;
+                border-radius: 100px;
+                border-style: ridge;
+                border-color:black;
+                height: 100px;
+                width:100px;
+                top: 250px;
+                left: 1000px;
+                background-color: black;
+                margin-right: revert;
+                
+             }
+        </style>
+    </head>
+    <body><center>
+        <h2>
+            login page
+        </h2>
+        <button class="but"onclick="document.getElementById('id01').style.display='block'">login</button>
+    </center>
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="closeModal">&times;</span>
+    <form class="modal-content" action="/action_page.php">
+       <center> <div class="imagecontainer">
+          <center><img src="kmc.PNG" alt="avtar" class="avatar"></center>
+        </div></center>
+        <div class="container">
+           <br> <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+           <br><br> <label for="psw"><b>Password</b></label>
+            <input type="password"  placeholder="Enter Password" name="psw" required>
+           <br><br><br> <label > <input type="checkbox" >remember me</label>
+            <br><br><center> <button type="submit" class="but" width="100px">Login</button></center><br>
+            
+        </div>
+           
+    </div>
+    </form>
+</div>
+</body>
+</html>
